@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1059236532123",
+    "project_id": "helfy-96e82",
+    "storage_bucket": "helfy-96e82.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1059236532123:android:91191f090a284c11095b3e",
+        "android_client_info": {
+          "package_name": "com.project.myhelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1059236532123-cgn0ac16es9up9c2t4tvm196kv365q4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYumMWD-Xd-3AoZoHfYAXUlcK9r1_Me5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1059236532123-cgn0ac16es9up9c2t4tvm196kv365q4t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

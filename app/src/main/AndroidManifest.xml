@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project.Helpy">
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.project.Helpy.feedbackActivity"/>
+        <activity android:name="com.project.Helpy.MobileLockScreenInstructionActivity" />
+        <activity android:name="com.project.Helpy.AlarmInstructionActivity" />
+        <activity android:name="com.project.Helpy.SoundProfileInstructionActivity" />
+        <activity android:name="com.project.Helpy.LocationInstructionActivity" />
+        <activity android:name="com.project.Helpy.ContactInstructionActivity" />
+        <activity android:name="com.project.Helpy.InstructionActivity" />
+        <activity android:name="com.project.Helpy.forgotPin" />
+        <activity
+            android:name="com.project.Helpy.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.project.Helpy.screenPinActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.project.Helpy.registrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.project.Helpy.forgotPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.project.Helpy.setupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.project.Helpy.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.project.Helpy.splash_screen"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.project.Helpy.SmsReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.project.Helpy.GPSTracker" />
+
+        <receiver
+            android:name="com.project.Helpy.MyAdmin"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/policies" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.project.Helpy.SettingsActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>
